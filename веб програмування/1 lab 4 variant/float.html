@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Макет (плаваючі блоки)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #cccccc;
+      font-family: Arial, sans-serif;
+    }
+
+    .frame {
+      width: 200px;
+      margin: 0 auto;
+      border: 2px solid #000;
+      background: #f0f0f0;
+    }
+
+    .header,
+    .footer {
+      background: #ffbf00;
+      height: 40px;
+      position: relative;
+      border: 1px solid #000;
+      border-left: none;
+      border-right: none;
+    }
+
+    .top-input {
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      width: 70px;
+      height: 16px;
+      background: #ffffff;
+      border: 1px solid #000;
+    }
+
+    .num-header {
+      position: absolute;
+      right: 5px;
+      top: 10px;
+      font-weight: bold;
+    }
+
+    .num-footer {
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%);
+      font-weight: bold;
+    }
+
+    .middle {
+      height: 120px;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .sidebar {
+      float: left;
+      width: 40px;
+      height: 100%;
+      background: #1f57ff;
+      position: relative;
+      border-right: 1px solid #000;
+    }
+
+    .sidebar-right {
+      float: right;
+      border-left: 1px solid #000;
+      border-right: none;
+    }
+
+    .content {
+      margin: 0 40px; /* по 40px слева и справа — ширина бокових панелей */
+      height: 100%;
+      background: #f0f0f0;
+      position: relative;
+    }
+
+    /* внутрішня панель 3 з рамочками */
+    .inner-panel {
+      position: relative;
+      margin: 0 auto;
+      width: 70%;
+      height: 100%;
+      background: #ffffff;
+      border-left: 2px solid #dddddd;
+      border-right: 2px solid #dddddd;
+    }
+
+    .inner-red {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 12px;
+      width: 60%;
+      height: 25px;
+      background: #ff6666;
+    }
+
+    .num-sidebar {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .num-content {
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="header">
+      <div class="top-input"></div>
+      <span class="num-header">1</span>
+    </div>
+
+    <div class="middle clearfix">
+      <div class="sidebar">
+        <span class="num-sidebar">2</span>
+      </div>
+
+      <div class="sidebar sidebar-right">
+        <span class="num-sidebar">4</span>
+      </div>
+
+      <div class="content">
+        <div class="inner-panel">
+          <span class="num-content">3</span>
+          <div class="inner-red"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span class="num-footer">5</span>
+    </div>
+  </div>
+</body>
+</html>

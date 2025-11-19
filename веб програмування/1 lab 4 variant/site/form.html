@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Сторінка з формою</title>
+</head>
+<body>
+
+<!-- Навігаційне меню -->
+<nav>
+  <a href="index.html">Головна</a> |
+  <a href="image.html">Малюнок</a> |
+  <a href="form.html">Форма</a>
+</nav>
+<hr>
+
+<h1>Реєстраційна форма</h1>
+
+<form action="#" method="post">
+
+  <!-- Прізвище, ім'я, по батькові (обов'язкове) -->
+  <label>
+    Прізвище, ім'я, по батькові:
+    <input type="text" name="user_name" required>
+  </label>
+  <br><br>
+
+  <!-- E-mail (не обов'язкове) -->
+  <label>
+    E-mail:
+    <input type="email" name="user_email">
+  </label>
+  <br><br>
+
+  <!-- Дата народження (обов'язкове) -->
+  <label>
+    Дата народження:
+    <input type="date" name="user_birthdate" required>
+  </label>
+  <br><br>
+
+  <!-- Стать (обов'язкове, радіокнопки) -->
+  <span>Стать:</span><br>
+  <label>
+    <input type="radio" name="user_sex" value="Чоловіча" required>
+    Чоловіча
+  </label><br>
+  <label>
+    <input type="radio" name="user_sex" value="Жіноча">
+    Жіноча
+  </label>
+  <br><br>
+
+  <input type="submit" value="Надіслати">
+
+</form>
+
+</body>
+</html>

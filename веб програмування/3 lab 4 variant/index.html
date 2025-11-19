@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Варіант 4 – Перегляд зображень</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      margin-bottom: 0.2em;
+    }
+
+    #thumbs {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 15px;
+    }
+
+    #thumbs img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid transparent;
+      box-sizing: border-box;
+    }
+
+    #thumbs img.active {
+      border-color: #007bff;
+    }
+
+    #main {
+      max-width: 400px;
+    }
+
+    #main img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Варіант 4</h1>
+  <p>
+    Перегляд зображень: натисніть на іконку зверху, щоб побачити повне зображення.
+  </p>
+
+  <!-- блок з мініатюрами -->
+  <div id="thumbs"></div>
+
+  <!-- блок з великим зображенням -->
+  <div id="main">
+    <img id="mainImage" src="" alt="Обране зображення">
+  </div>
+
+  <script>
+    // Масив імен файлів (JSON-подібний формат, як у завданні)
+    // Сюди вписуєш назви СВОЇХ файлів:
+    var a = ['cat1.jpg', 'cat2.jpg', 'cat3.jpg'];
+
+    function initGallery(files) {
+      const thumbsContainer = document.getElementById('thumbs');
+      const mainImage = document.getElementById('mainImage');
+
+      // очищаємо контейнер на випадок повторної ініціалізації
+      thumbsContainer.innerHTML = '';
+
+      files.forEach(function (file, index) {
+        const thumb = document.createElement('img');
+        thumb.src = file;
+        thumb.alt = 'Зображення ' + (index + 1);
+        thumb.className = 'thumb';
+
+        thumb.addEventListener('click', function () {
+          // міняємо велике зображення
+          mainImage.src = file;
+
+          // підсвічуємо активну іконку
+          document.querySelectorAll('#thumbs img').forEach(function (img) {
+            img.classList.remove('active');
+          });
+          thumb.classList.add('active');
+        });
+
+        thumbsContainer.appendChild(thumb);
+      });
+
+      // показати перше зображення за замовчуванням
+      if (files.length > 0) {
+        mainImage.src = files[0];
+        const firstThumb = thumbsContainer.querySelector('img');
+        if (firstThumb) firstThumb.classList.add('active');
+      }
+    }
+
+    // Виклик з масивом a – це як отримати масив параметром
+    initGallery(a);
+  </script>
+</body>
+</html>

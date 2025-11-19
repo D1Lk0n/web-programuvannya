@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NovaTech — корпоративний сайт IT-компанії</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  >
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============== NAVBAR ============== -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-code-slash me-1"></i>NovaTech
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#hero">Головна</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Послуги</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Команда</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Блог</a>
+          </li>
+
+          <!-- Багаторівневе меню -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown"
+               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Рішення
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
+              <li><a class="dropdown-item" href="#">Корпоративні сайти</a></li>
+              <li><a class="dropdown-item" href="#">Інтернет-магазини</a></li>
+
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">
+                  Хмарні рішення
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">SaaS-платформи</a></li>
+                  <li><a class="dropdown-item" href="#">API-інтеграції</a></li>
+                </ul>
+              </li>
+
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Індивідуальна розробка</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contacts">Контакти</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- щоб контент не ховався під fixed navbar -->
+<div class="navbar-spacer"></div>
+
+<!-- ============== HERO (зображення як фон) ============== -->
+<section id="hero" class="hero d-flex align-items-center text-white">
+  <div class="hero-overlay"></div>
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-3">
+          Розробка веб-рішень для корпоративного бізнесу
+        </h1>
+        <p class="lead mb-4">
+          NovaTech створює масштабовані сайти, портали та хмарні платформи.
+          Ми говоримо мовою вашого бізнесу та перетворюємо ідеї на працюючі продукти.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#services" class="btn btn-primary btn-lg">
+            Наші послуги
+          </a>
+          <a href="#contacts" class="btn btn-outline-light btn-lg">
+            Безкоштовна консультація
+          </a>
+        </div>
+
+        <!-- Статистика компанії -->
+        <div class="row g-3 mt-4 hero-stats">
+          <div class="col-4">
+            <div class="stat-box text-center">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">років досвіду</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="stat-box text-center">
+              <div class="stat-number">120+</div>
+              <div class="stat-label">проєктів</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="stat-box text-center">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">підтримка</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- “відео/зображення” справа -->
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden hero-media">
+          <!-- Замість реального відео — прев’ю із кнопкою play -->
+          <img
+            src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Команда розробників"
+          >
+          <div class="hero-media-play">
+            <i class="bi bi-play-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SERVICES ============== -->
+<section id="services" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Наші послуги</h2>
+      <p class="text-muted">
+        Повний цикл: аналітика, дизайн, розробка, тестування, впровадження та підтримка.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm service-card">
+          <div class="card-body">
+            <div class="icon-circle mb-3">
+              <i class="bi bi-building"></i>
+            </div>
+            <h5 class="card-title">Корпоративні веб-портали</h5>
+            <p class="card-text">
+              Єдина точка входу до даних компанії: внутрішні сервіси, аналітика,
+              особисті кабінети співробітників і партнерів.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm service-card">
+          <div class="card-body">
+            <div class="icon-circle mb-3">
+              <i class="bi bi-cart-check"></i>
+            </div>
+            <h5 class="card-title">E-commerce рішення</h5>
+            <p class="card-text">
+              Інтернет-магазини, B2B-платформи, інтеграція з ERP, платіжними
+              системами та службами доставки.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm service-card">
+          <div class="card-body">
+            <div class="icon-circle mb-3">
+              <i class="bi bi-cloud-arrow-up"></i>
+            </div>
+            <h5 class="card-title">Хмарні платформи</h5>
+            <p class="card-text">
+              SaaS-рішення, мікросервісна архітектура, безпечні API,
+              CI/CD-процеси та автоматичне масштабування.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TEAM ============== -->
+<section id="team" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Наша команда</h2>
+      <p class="text-muted">
+        Крос-функціональна команда, яка закриває всі етапи розробки продукту.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 text-center team-card shadow-sm">
+          <img src="https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=600"
+               class="card-img-top" alt="CEO">
+          <div class="card-body">
+            <h5 class="card-title mb-0">Олена Сидоренко</h5>
+            <small class="text-muted">CEO &amp; Co-Founder</small>
+            <p class="card-text mt-2">
+              Визначає стратегічні напрямки розвитку компанії та партнерські програми.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 text-center team-card shadow-sm">
+          <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=600"
+               class="card-img-top" alt="CTO">
+          <div class="card-body">
+            <h5 class="card-title mb-0">Ігор Кравчук</h5>
+            <small class="text-muted">CTO</small>
+            <p class="card-text mt-2">
+              Відповідає за архітектуру, технологічний стек та якість технічних рішень.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 text-center team-card shadow-sm">
+          <img src="https://images.pexels.com/photos/1181524/pexels-photo-1181524.jpeg?auto=compress&cs=tinysrgb&w=600"
+               class="card-img-top" alt="Design Lead">
+          <div class="card-body">
+            <h5 class="card-title mb-0">Марія Литвин</h5>
+            <small class="text-muted">Design Lead</small>
+            <p class="card-text mt-2">
+              Створює UX/UI-концепції, дизайн-системи та контролює візуальну цілісність продуктів.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 text-center team-card shadow-sm">
+          <img src="https://images.pexels.com/photos/1181715/pexels-photo-1181715.jpeg?auto=compress&cs=tinysrgb&w=600"
+               class="card-img-top" alt="PM">
+          <div class="card-body">
+            <h5 class="card-title mb-0">Андрій Поліщук</h5>
+            <small class="text-muted">Project Manager</small>
+            <p class="card-text mt-2">
+              Керує проєктами, комунікує з замовниками та слідкує за строками й бюджетом.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BLOG / NEWS ============== -->
+<section id="blog" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Блог і новини</h2>
+      <p class="text-muted">
+        Ділимося досвідом, кейсами клієнтів та оглядами технологій.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <article class="card h-100 shadow-sm blog-card">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">
+              12.10.2025
+            </span>
+            <h5 class="card-title">Міграція корпоративного порталу в хмару</h5>
+            <p class="card-text">
+              Розповідаємо, як перенесли інфраструктуру логістичного холдингу
+              до Kubernetes-кластера з безперервним деплоєм.
+            </p>
+            <a href="#" class="stretched-link text-decoration-none">
+              Читати далі <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-4">
+        <article class="card h-100 shadow-sm blog-card">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">
+              25.09.2025
+            </span>
+            <h5 class="card-title">Безпека веб-додатків: наші підходи</h5>
+            <p class="card-text">
+              OWASP Top 10, аудит, pen-тести та моніторинг — що ми робимо, щоб ваші дані залишались захищеними.
+            </p>
+            <a href="#" class="stretched-link text-decoration-none">
+              Читати далі <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-4">
+        <article class="card h-100 shadow-sm blog-card">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">
+              03.09.2025
+            </span>
+            <h5 class="card-title">Дизайн-система для великого холдингу</h5>
+            <p class="card-text">
+              Як ми уніфікували інтерфейси десятків сервісів та скоротили
+              витрати на підтримку й розробку фронтенду.
+            </p>
+            <a href="#" class="stretched-link text-decoration-none">
+              Читати далі <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CONTACTS + MAP ============== -->
+<section id="contacts" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Контакти</h2>
+      <p class="text-muted">
+        Заповніть форму — і ми зв’яжемося з вами протягом одного робочого дня.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <form class="contact-form shadow-sm p-4 rounded-4 bg-light">
+          <div class="mb-3">
+            <label for="name" class="form-label">Ім'я та компанія</label>
+            <input type="text" class="form-control" id="name"
+                   placeholder="Ім'я, назва компанії">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email"
+                   placeholder="name@company.com">
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Ваш запит</label>
+            <textarea class="form-control" id="message" rows="4"
+                      placeholder="Коротко опишіть задачу або проєкт"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Надіслати запит
+          </button>
+        </form>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="ratio ratio-16x9 shadow-sm rounded-4 overflow-hidden mb-3">
+          <!-- Можеш вставити свій embed з Google Maps.
+               Зараз — просто приклад. -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.949902162348!2d30.5234009768957!3d50.45003367159227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5ccf8c6e4d%3A0x9c0f6c0a9b0b9a5!2z0JrQuNC10LLRgdC60L7QstGB0LrQsNGPINGD0LsuLCAxLCDQmtC40LXQsiwg0JrQuNC10LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMDEwMDA!5e0!3m2!1suk!2sua!4v1700000000000"
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <p class="mb-1">
+          <i class="bi bi-geo-alt me-2"></i>Київ, вул. Прикладна, 10
+        </p>
+        <p class="mb-1">
+          <i class="bi bi-envelope me-2"></i>sales@novatech.com
+        </p>
+        <p class="mb-0">
+          <i class="bi bi-telephone me-2"></i>+38 (044) 123-45-67
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="py-3 bg-dark text-white-50">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <span>© 2025 NovaTech. Усі права захищені.</span>
+    <span class="small">Навчальний проєкт для лабораторної роботи.</span>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

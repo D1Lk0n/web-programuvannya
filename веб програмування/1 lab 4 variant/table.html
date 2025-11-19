@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Макет (таблиця)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #cccccc;
+      font-family: Arial, sans-serif;
+    }
+
+    .frame {
+      width: 200px;
+      margin: 0 auto;
+      border: 2px solid #000;
+      background: #f0f0f0;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      height: 200px;
+    }
+
+    td {
+      padding: 0;
+      border: 1px solid #000;
+      position: relative;
+    }
+
+    .header,
+    .footer {
+      background: #ffbf00;
+      height: 40px;
+    }
+
+    .sidebar {
+      background: #1f57ff;
+      width: 40px;
+    }
+
+    /* ячейка, в которой находится область 3 */
+    .content {
+      background: #f0f0f0; /* как общий фон */
+    }
+
+    /* внутренняя область 3 с рамками */
+    .inner-panel {
+      position: relative;
+      margin: 0 auto;
+      width: 70%;          /* сужаем как на картинке */
+      height: 100%;
+      background: #ffffff;
+      border-left: 2px solid #dddddd;
+      border-right: 2px solid #dddddd;
+    }
+
+    .top-input {
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      width: 70px;
+      height: 16px;
+      border: 1px solid #000;
+      background: #ffffff;
+    }
+
+    .inner-red {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 12px;
+      width: 60%;
+      height: 25px;
+      background: #ff6666;
+    }
+
+    .num {
+      position: absolute;
+      right: 5px;
+      top: 10px;
+      font-weight: bold;
+    }
+
+    /* цифра 3 — теперь внутри inner-panel */
+    .num-center {
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%);
+      font-weight: bold;
+    }
+
+    .num-sidebar {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .num-footer {
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <table>
+      <tr>
+        <td colspan="3" class="header">
+          <div class="top-input"></div>
+          <span class="num">1</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="sidebar">
+          <span class="num-sidebar">2</span>
+        </td>
+
+        <!-- область 3 с внутренней панелью -->
+        <td class="content">
+          <div class="inner-panel">
+            <span class="num-center">3</span>
+            <div class="inner-red"></div>
+          </div>
+        </td>
+
+        <td class="sidebar">
+          <span class="num-sidebar">4</span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="footer">
+          <span class="num-footer">5</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
