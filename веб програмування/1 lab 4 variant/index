@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Лабораторна робота</title>
+</head>
+<body>
+  <h1>HTML + CSS</h1>
+
+  <p>Оберіть спосіб верстки:</p>
+
+  <ul>
+    <li><a href="table.html">Розмітка за допомогою таблиці</a></li>
+    <li><a href="float.html">Розмітка за допомогою плаваючих блоків</a></li>
+    <li><a href="inline.html">Розмітка за допомогою inline-block</a></li>
+  </ul>
+</body>
+</html>
